@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            My Resume
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1> My Resume</h1>
+        <p id="res"> </p>
+          
+        <script align="center">
+            var data = window.location.search;
+            var params = new URLSearchParams(data);
+            console.log(params);
+            var name = params.get("name");
+            var email = params.get("email");
+            var gender = params.get("gender");
+            var education = params.get("education");
+            var experience = params.get("experience");
+            var skills = params.get("skills");
+
+            var getData = "Name : "+name+" <br>";
+                getData += "Email : "+email+" <br>";
+                getData += "Gender : "+gender+" <br>";
+                getData += "Education : "+education+" <br>";
+                getData += "Experience : "+experience+" <br>";
+                getData += "Skills : "+skills+" <br>";
+            
+            document.getElementById("res").innerHTML = getData
+        </script>
+    </body>
+</html>
